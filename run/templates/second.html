@@ -1,0 +1,56 @@
+
+<html>
+     <head>
+     <style>
+.button {
+    background-color: powderblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+     <script>
+function goBack() {
+    window.history.back();
+}</script>
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+          <title >Results</title>
+
+     </head>
+     <body background="../static/back4.jpg" background-size: cover;
+>
+     
+      
+    <center><img src="../static/pic3.png" height="120" ></center>
+     <right><button style="float: right;" class="button" onclick="goBack()">Go Back</button></right>
+
+
+
+
+      <h1  style="font-family:Great Vibes;font-size:50;color:powderblue">Search Results</h1>
+         <div>
+         {% set n = 1 %}
+          <p style="color: powderblue;font-family:cursive; ;font-size:20">Did you mean : 
+          <font color="white">{% for your_list_element in text %}
+            {{ your_list_element }} 
+        {% endfor %}</font>
+  			</p>
+          <p style="color: powderblue;font-family:cursive; ;font-size:20"> <b>{{ text2 }} Results match your query
+            </b></p>
+            
+            <br>
+           {% for your_list_element in your_list %}
+      			<p style="color:white;font-family:times; ;font-size:19">{{loop.index}}. {{ your_list_element }} </p>
+            {% set n = n + 1 %}
+  			{% endfor %}
+        </div>
+     </body>
+</html>

@@ -1,0 +1,35 @@
+
+<html>
+     <head>
+     <script>
+function goBack() {
+    window.history.back();
+}</script>
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+          <title>Results</title>
+
+     </head>
+     <body background="back2.jpg">
+
+     <center><img src="pic3.png" height="100" ></center>
+     <button onclick="goBack()">Go Back</button>
+
+
+
+      <h1  style="font-family:Cookie;font-size:50;color:powderblue">Search Results</h1>
+
+         <div style="background-color:black;">
+          <br>
+          <p>Did you mean : {% for your_list_element in text %}
+            {{ your_list_element }} 
+        {% endfor %}
+  			</p>
+          <br>
+          <p> <b>{{ text2 }} Results match your query
+            </b></p><br>
+           {% for your_list_element in your_list %}
+      			<p>{{ your_list_element }} </p>
+  			{% endfor %}
+        </div>
+     </body>
+</html>
